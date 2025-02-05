@@ -12,6 +12,7 @@ import me.trihung.entity.Users;
 import me.trihung.jwt.JwtUtil;
 import me.trihung.services.IUserService;
 import me.trihung.services.impl.UserServiceImpl;
+import me.trihung.vnpay.VNPayConfig;
 
 @SuppressWarnings("serial")
 @WebServlet(urlPatterns = "/login") 
@@ -33,7 +34,7 @@ public class LoginController extends HttpServlet {
 			return;
 		}
 		IUserService ius = new UserServiceImpl();
-		if (ius.login(username, password)) {
+		if (ius.login(username, VNPayConfig.hmacSHA512(VNPayConfig.vnp_HashSecret, password))) {
 			String token = JwtUtil.generateToken(username);
 			resp.setHeader("Authorization", "Bearer_" + token);
 			resp.addCookie(getCookie(token));

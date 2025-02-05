@@ -608,7 +608,7 @@ input[type="file"] {
 
     <!-- SIDEBAR -->
     <section id="sidebar">
-        <a href="" class="brand">
+        <a href="http://localhost:8080/DAWEBB/home" class="brand">
             <i class="bx bxs-smile"></i>
             <span class="text">AdminHub</span>
         </a>
@@ -626,7 +626,7 @@ input[type="file"] {
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="http://localhost:8080/DAWEBB/admin/thongke">
                     <i class='bx bxs-bar-chart-alt-2' ></i>
                     <span class="text">Analytics</span>
                 </a>
@@ -650,7 +650,7 @@ input[type="file"] {
                 </a>
             </li>
             <li>
-                <a href="logout">
+                <a href="../logout">
                     <i class='bx bx-log-in' ></i>
                     <span class="text">Log Out</span>
                 </a>

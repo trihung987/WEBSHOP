@@ -16,9 +16,7 @@ public class Utils {
 	
 	public static String CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 	public static Random RANDOM = new Random();
-	public static String toString(Date d) {
-		return formatter.format(d);
-	}
+	
 	public static String generateRandomString(int length) {
 		StringBuilder stringBuilder = new StringBuilder(length);
 
@@ -63,13 +61,33 @@ public class Utils {
 	}
 	static SimpleDateFormat formatter = new SimpleDateFormat("ddMMyyyy");
 	static SimpleDateFormat formatter2 = new SimpleDateFormat("dd/MM/yyyy");
+	static SimpleDateFormat formatter3 = new SimpleDateFormat("yyyy-MM-dd");
+
 	public static String getDate() {
 		return formatter2.format(new Date(System.currentTimeMillis()));
+	}
+	
+	public static String toString(Date d) {
+		return formatter.format(d);
+	}
+	
+	public static String toString2(Date d) {
+		return formatter2.format(d);
 	}
 	
 	public static Date getDateFrom(String s) {
 		try {
 			return new Date(formatter.parse(s).getTime());
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public static Date getDateFrom2(String s) {
+		try {
+			return new Date(formatter3.parse(s).getTime());
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

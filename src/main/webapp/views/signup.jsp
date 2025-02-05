@@ -20,7 +20,7 @@
   font-family: "Montserrat";
 }
 body {
-  background-image: url(<c:url value='/views/img/japan-bg.jpg'/>);
+  background-image: url('http://localhost:8080/DAWEBB/views/img/bg-japan-signin.png');
   background-size: cover;
   /* backdrop-filter: blur(5px); */
   /* background-position-y: 50%; */
@@ -295,7 +295,7 @@ label {
                     data-aos-easing="linear"
                     data-aos-duration="1500" >ベトナム</p>
                 </div>
-                <img src="<c:url value='/views/img/bg-japan-signup.png'/>" alt="" width="600px" height="600px"
+                <img src="http://localhost:8080/DAWEBB/views/img/bg-japan-signup.png" alt="" width="600px" height="600px"
                     data-aos="fade-down"
                     data-aos-easing="linear"
                     data-aos-duration="1500" >

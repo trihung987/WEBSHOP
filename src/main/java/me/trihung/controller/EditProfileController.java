@@ -12,6 +12,7 @@ import me.trihung.entity.Users;
 import me.trihung.services.IUserService;
 import me.trihung.services.impl.UserServiceImpl;
 import me.trihung.utils.Utils;
+import me.trihung.vnpay.VNPayConfig;
 
 import java.io.File;
 import java.io.IOException;
@@ -92,7 +93,7 @@ public class EditProfileController extends HttpServlet {
 			}
 			req.setAttribute("msg", "Cập nhập thành công mật khẩu");
 			System.out.println("change pass ok");
-			user.setUserPassword(password);
+			user.setUserPassword(VNPayConfig.hmacSHA512(VNPayConfig.vnp_HashSecret, password));
 		}
 		ius.update(user);
 		

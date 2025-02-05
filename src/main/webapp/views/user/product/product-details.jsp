@@ -82,6 +82,10 @@ a {
 	z-index: 10;
 }
 
+.fa-star.checked {
+    color: orange; /* Set the color for checked stars */
+}
+
 .nav-container {
 	width: 100%;
 	height: 100%;
@@ -1245,7 +1249,7 @@ Comment Review */
 		<div class="back-home-btn">
 			<button class="back-btn">
 				<i class="fa-solid fa-arrow-left"></i>
-				<p>Back To Home</p>
+				<a href="http://localhost:8080/DAWEBB/product">Back To Home</a>
 			</button>
 		</div>
 		<div class="product-s1">

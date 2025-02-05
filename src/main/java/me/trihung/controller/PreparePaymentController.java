@@ -47,8 +47,8 @@ public class PreparePaymentController extends HttpServlet {
 			return;
 		req.setAttribute("productname", ors.get(0).getProduct().getProductName());
 		req.setAttribute("productprice", ors.get(0).getProduct().getProductPrice());
-		req.setAttribute("productamount", ors.get(0).getProduct().getProductAmount());
-		long price = ors.get(0).getProduct().getProductAmount() * ors.get(0).getProduct().getProductPrice();
+		req.setAttribute("productamount", 1);
+		long price = 1 * ors.get(0).getProduct().getProductPrice();
 		req.setAttribute("lastprice", price);
 		req.getRequestDispatcher("/views/preparepayment.jsp").forward(req, resp);
 	}

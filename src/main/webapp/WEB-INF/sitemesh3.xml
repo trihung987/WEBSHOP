@@ -6,6 +6,7 @@
 	<mapping path="/editprofile" exclude="true" />
 	<mapping path="/preparepayment" exclude="true" />
 	<mapping path="/payment/check" exclude="true" />
+	<mapping path="/thongke" exclude="true" />
 	
 	<mapping path="/api/*" exclude="true" />
 	<mapping path="/admin/*" exclude="true" />

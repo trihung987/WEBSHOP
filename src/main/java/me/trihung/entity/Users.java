@@ -37,7 +37,7 @@ public class Users implements Serializable{
 	@Column(name = "UserName", columnDefinition = "VARCHAR(100) NOT NULL")
 	private String userName;
 	
-	@Column(name = "UserPassword", columnDefinition = "VARCHAR(100) NOT NULL")
+	@Column(name = "UserPassword", columnDefinition = "NVARCHAR(400) NOT NULL")
 	private String userPassword;
 	
 	@Column(name = "UserIsAdmin", columnDefinition = "bit")

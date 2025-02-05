@@ -289,13 +289,13 @@ input[type="file"] {
     <section class="main-content">
         <div class="container">
             <div class="back-to-landing-page">
-                <a href="" class="nav-logo">
+                <a href="localhost:8080/DAWEBB/home" class="nav-logo">
                     <img src="<c:url value='/views/img/logo.png'/>" alt="" width="40px" height="40px">
                     <h1>Gundam Garden</h1>
                 </a>
                 <button class="back-btn">
                     <i class="fa-solid fa-arrow-left"></i>
-                    <a href="home">Back To Home</a>
+                    <a href="localhost:8080/DAWEBB/home">Back To Home</a>
                 </button>
             </div>
             <div class="main">

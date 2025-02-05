@@ -97,8 +97,10 @@ public class TransactionDaoImpl implements ITransactionDao{
 		String sql = "SELECT t FROM Transaction t WHERE t.transactionDay BETWEEN :startDate AND :endDate";
 		EntityManager enma = JPAConfig.getEntityManager();
 		TypedQuery<Transaction> query = enma.createQuery(sql, Transaction.class);
-		query.setParameter("startDate", Utils.getDateFrom(date1));
-		query.setParameter("endDate", Utils.getDateFrom(date2));
+		System.out.println(Utils.getDateFrom2(date1) +" date");
+		System.out.println(Utils.getDateFrom2(date2)+" date2");
+		query.setParameter("startDate", Utils.getDateFrom2(date1));
+		query.setParameter("endDate", Utils.getDateFrom2(date2));
 		return query.getResultList();
 	}
 

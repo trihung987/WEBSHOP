@@ -65,8 +65,9 @@ public class TransactionController extends HttpServlet {
 	        tran.setTransactionDay(new Date(System.currentTimeMillis()));
 	        tran.setTransAddress(user.getUseraddress());
 	        tran.setTransStatus(1);
-	        long price = Long.parseLong(req.getParameter("vnp_Amount"));
+	        long price = Long.parseLong(req.getParameter("vnp_Amount"))/100;
 	        tran.setTransTotalValue(price);
+	        tran.setUser(user);
 	        ITransactionService its = new TransactionServiceImpl();
 	        its.insert(tran);
 	        req.getRequestDispatcher("/views/success.jsp").forward(req, resp);

@@ -28,7 +28,7 @@ private static final long serialVersionUID = 5302027001308063983L;
 	
 	public RatingModel(Rating rating) {
 		ratingId = rating.getRatingId();
-		ratingDate = Utils.toString(rating.getRatingDate());
+		ratingDate = Utils.toString2(rating.getRatingDate());
 		ratingValue = rating.getRatingValue();
 		ratingComment = rating.getRatingComment();
 		user = rating.getUser().getUserfullName();

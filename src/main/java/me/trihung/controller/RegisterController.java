@@ -10,6 +10,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import me.trihung.entity.Users;
 import me.trihung.services.IUserService;
 import me.trihung.services.impl.UserServiceImpl;
+import me.trihung.vnpay.VNPayConfig;
 
 @SuppressWarnings("serial")
 @WebServlet(urlPatterns = "/register") 
@@ -48,7 +49,8 @@ public class RegisterController extends HttpServlet {
 			return;
 		}
 		user.setUserName(username);
-		user.setUserPassword(password);
+		user.setUserPassword(VNPayConfig.hmacSHA512(VNPayConfig.vnp_HashSecret, password));
+		
 		user.setUserIsAdmin(isadmin);
 		user.setUserRegisDay(dateRegis);
 		if (ius.register(user)) {

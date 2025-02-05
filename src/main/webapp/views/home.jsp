@@ -1001,7 +1001,7 @@ a{
                             <img src="<c:url value='/views/img/vth.jpg'/>" alt="">
                         </div>
                         <h2>Vương Trí Hùng</h2>
-                        <p>22110xxx</p>
+                        <p>22110513</p>
                     </div>
                 </a>
                 <div class="tooltip-3">
